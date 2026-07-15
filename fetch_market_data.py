@@ -1,10 +1,15 @@
-"""Fetches Gold, EUR/USD, and BTC/USD from Twelve Data, computes indicators
-and a trade setup (Entry/SL/TP), writes data/latest.json, and sends a phone
-notification (via ntfy.sh) whenever a symbol's signal changes. Standalone -
-no MT5, safe for GitHub Actions.
+"""Fetches market data for one instrument group (gold or crypto) from Twelve
+Data, computes indicators, builds a trade setup, and merges the result into
+data/latest.json - preserving whatever the OTHER group last wrote, since gold
+and crypto run on separate schedules and both touch this same file. Notifies
+via ntfy.sh only when a real BUY/SELL setup forms (not on reverting to HOLD).
+Standalone - no MT5, safe for GitHub Actions.
+
+Usage: python fetch_market_data.py <gold|crypto>
 """
 import json
 import os
+import sys
 from decimal import Decimal
 from datetime import datetime, timezone
 
@@ -26,8 +31,11 @@ API_KEY = os.environ["TWELVE_DATA_API_KEY"]
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
-SYMBOLS = ["XAU/USD", "EUR/USD", "BTC/USD"]
-INTERVAL = "1h"
+GROUPS = {
+    "gold": {"XAU/USD": "5min"},
+    "crypto": {"BTC/USD": "15min", "ETH/USD": "15min", "SOL/USD": "15min"},
+}
+
 OUTPUTSIZE = 50
 DATA_PATH = "data/latest.json"
 
@@ -37,10 +45,10 @@ TARGET_ATR_MULT = Decimal("3.0")
 BASE_URL = "https://api.twelvedata.com/time_series"
 
 
-def fetch_symbol(symbol: str) -> dict:
+def fetch_symbol(symbol: str, interval: str) -> dict:
     params = {
         "symbol": symbol,
-        "interval": INTERVAL,
+        "interval": interval,
         "outputsize": OUTPUTSIZE,
         "apikey": API_KEY,
     }
@@ -76,26 +84,19 @@ def determine_regime(adx_value: Decimal | None) -> str | None:
     return "transitional"
 
 
-def build_trade_setup(
-    signal: str | None, price: Decimal, atr: Decimal | None
-) -> dict:
-    """Mirrors trade_signal.py: BUY = long setup (stop below, target above);
-    SELL = short setup (stop above, target below); HOLD/unknown ATR = no levels.
-    Risk 1.5x ATR to make 3x ATR (risk 1, reward 2)."""
+def build_trade_setup(signal: str | None, price: Decimal, atr: Decimal | None) -> dict:
     if signal is None or signal == "HOLD" or atr is None:
         return {"entry": None, "stop_loss": None, "take_profit": None, "risk_reward": None}
-
     if signal == "BUY":
         stop = price - STOP_ATR_MULT * atr
         target = price + TARGET_ATR_MULT * atr
         risk = price - stop
         reward = target - price
-    else:  # SELL -> short setup
+    else:
         stop = price + STOP_ATR_MULT * atr
         target = price - TARGET_ATR_MULT * atr
         risk = stop - price
         reward = price - target
-
     rr = (reward / risk) if risk > 0 else None
     return {
         "entry": to_num(price),
@@ -105,18 +106,14 @@ def build_trade_setup(
     }
 
 
-def load_previous_signals() -> dict[str, str | None]:
+def load_existing_data() -> dict:
     if not os.path.exists(DATA_PATH):
-        return {}
+        return {"updated_at": None, "instruments": {}}
     try:
         with open(DATA_PATH) as f:
-            previous = json.load(f)
-        return {
-            symbol: info.get("signal")
-            for symbol, info in previous.get("instruments", {}).items()
-        }
+            return json.load(f)
     except (json.JSONDecodeError, KeyError):
-        return {}
+        return {"updated_at": None, "instruments": {}}
 
 
 def send_notification(title: str, message: str) -> None:
@@ -133,17 +130,20 @@ def send_notification(title: str, message: str) -> None:
 
 
 def main() -> None:
-    previous_signals = load_previous_signals()
-    is_first_run = not previous_signals
+    if len(sys.argv) < 2 or sys.argv[1] not in GROUPS:
+        raise SystemExit(f"Usage: python fetch_market_data.py <{'|'.join(GROUPS)}>")
+    group_name = sys.argv[1]
+    instruments = GROUPS[group_name]
 
-    output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "instruments": {},
+    output = load_existing_data()
+    output.setdefault("instruments", {})
+    previous_signals = {
+        symbol: info.get("signal") for symbol, info in output["instruments"].items()
     }
 
-    for symbol in SYMBOLS:
-        print(f"Fetching {symbol}...")
-        data = fetch_symbol(symbol)
+    for symbol, interval in instruments.items():
+        print(f"Fetching {symbol} ({interval})...")
+        data = fetch_symbol(symbol, interval)
         candles = list(reversed(data["values"]))
         closes = [Decimal(c["close"]) for c in candles]
         highs = [Decimal(c["high"]) for c in candles]
@@ -177,6 +177,7 @@ def main() -> None:
         trade_setup = build_trade_setup(signal, price, atr[latest_idx])
 
         output["instruments"][symbol] = {
+            "interval": interval,
             "meta": data["meta"],
             "latest_close": to_num(price),
             "latest_datetime": candles[latest_idx]["datetime"],
@@ -214,23 +215,24 @@ def main() -> None:
         )
 
         old_signal = previous_signals.get(symbol)
-        if not is_first_run and signal is not None and signal != old_signal:
-            if signal in ("BUY", "SELL") and trade_setup["entry"] is not None:
-                body = (
-                    f"{signal} setup ({regime or 'unknown regime'})\n"
-                    f"Entry: {trade_setup['entry']:.2f}\n"
-                    f"SL: {trade_setup['stop_loss']:.2f}\n"
-                    f"TP: {trade_setup['take_profit']:.2f}\n"
-                    f"R:R {trade_setup['risk_reward']:.1f}"
-                )
-            else:
-                body = f"Changed from {old_signal or 'unknown'} to {signal}"
-            send_notification(title=f"{symbol}: {signal}", message=body)
+        symbol_is_first_run = symbol not in previous_signals
+        is_new_setup = signal in ("BUY", "SELL") and signal != old_signal
+        if not symbol_is_first_run and is_new_setup and trade_setup["entry"] is not None:
+            body = (
+                f"{signal} setup ({regime or 'unknown regime'})\n"
+                f"Entry: {trade_setup['entry']:.2f}\n"
+                f"SL: {trade_setup['stop_loss']:.2f}\n"
+                f"TP: {trade_setup['take_profit']:.2f}\n"
+                f"R:R {trade_setup['risk_reward']:.1f}"
+            )
+            send_notification(title=f"{symbol}: {signal} setup", message=body)
+
+    output["updated_at"] = datetime.now(timezone.utc).isoformat()
 
     with open(DATA_PATH, "w") as f:
         json.dump(output, f, indent=2)
 
-    print("\nWrote data/latest.json")
+    print(f"\nWrote {DATA_PATH} (group: {group_name})")
 
 
 if __name__ == "__main__":
