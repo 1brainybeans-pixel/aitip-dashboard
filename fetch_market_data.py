@@ -2,8 +2,10 @@
 Data, computes indicators, builds a trade setup, and merges the result into
 data/latest.json - preserving whatever the OTHER group last wrote, since gold
 and crypto run on separate schedules and both touch this same file. Notifies
-via ntfy.sh only when a real BUY/SELL setup forms (not on reverting to HOLD).
-Standalone - no MT5, safe for GitHub Actions.
+via ntfy.sh only when a real BUY/SELL setup forms (not on reverting to HOLD),
+and appends every fired setup to data/signal_log.jsonl - an append-only
+record for later analysis, never overwritten. Standalone - no MT5, safe for
+GitHub Actions.
 
 Usage: python fetch_market_data.py <gold|crypto>
 """
@@ -38,6 +40,7 @@ GROUPS = {
 
 OUTPUTSIZE = 50
 DATA_PATH = "data/latest.json"
+LOG_PATH = "data/signal_log.jsonl"
 
 STOP_ATR_MULT = Decimal("1.5")
 TARGET_ATR_MULT = Decimal("3.0")
@@ -116,6 +119,25 @@ def load_existing_data() -> dict:
         return {"updated_at": None, "instruments": {}}
 
 
+def append_to_log(symbol: str, signal: str, regime: str | None, trade_setup: dict, indicators: dict) -> None:
+    """Appends one line per fired setup. Never overwrites - this file only
+    ever grows, so it becomes a real history to analyze later."""
+    entry = {
+        "logged_at": datetime.now(timezone.utc).isoformat(),
+        "symbol": symbol,
+        "signal": signal,
+        "regime": regime,
+        "entry": trade_setup["entry"],
+        "stop_loss": trade_setup["stop_loss"],
+        "take_profit": trade_setup["take_profit"],
+        "risk_reward": trade_setup["risk_reward"],
+        "rsi": indicators["rsi"],
+        "adx": indicators["adx"],
+    }
+    with open(LOG_PATH, "a") as f:
+        f.write(json.dumps(entry) + "\n")
+
+
 def send_notification(title: str, message: str) -> None:
     try:
         requests.post(
@@ -176,6 +198,17 @@ def main() -> None:
         regime = determine_regime(adx[latest_idx])
         trade_setup = build_trade_setup(signal, price, atr[latest_idx])
 
+        indicators_dict = {
+            "rsi": to_num(rsi[latest_idx]),
+            "rsi_ma": to_num(rsi_ma[latest_idx]),
+            "macd": to_num(macd_result.macd[latest_idx]),
+            "macd_signal": to_num(macd_result.signal[latest_idx]),
+            "macd_histogram": to_num(macd_result.histogram[latest_idx]),
+            "alma": to_num(alma[latest_idx]),
+            "adx": to_num(adx[latest_idx]),
+            "atr": to_num(atr[latest_idx]),
+        }
+
         output["instruments"][symbol] = {
             "interval": interval,
             "meta": data["meta"],
@@ -184,16 +217,7 @@ def main() -> None:
             "signal": signal,
             "regime": regime,
             "trade_setup": trade_setup,
-            "indicators": {
-                "rsi": to_num(rsi[latest_idx]),
-                "rsi_ma": to_num(rsi_ma[latest_idx]),
-                "macd": to_num(macd_result.macd[latest_idx]),
-                "macd_signal": to_num(macd_result.signal[latest_idx]),
-                "macd_histogram": to_num(macd_result.histogram[latest_idx]),
-                "alma": to_num(alma[latest_idx]),
-                "adx": to_num(adx[latest_idx]),
-                "atr": to_num(atr[latest_idx]),
-            },
+            "indicators": indicators_dict,
             "candles": [
                 {
                     "datetime": c["datetime"],
@@ -218,6 +242,7 @@ def main() -> None:
         symbol_is_first_run = symbol not in previous_signals
         is_new_setup = signal in ("BUY", "SELL") and signal != old_signal
         if not symbol_is_first_run and is_new_setup and trade_setup["entry"] is not None:
+            append_to_log(symbol, signal, regime, trade_setup, indicators_dict)
             body = (
                 f"{signal} setup ({regime or 'unknown regime'})\n"
                 f"Entry: {trade_setup['entry']:.2f}\n"
