@@ -1,0 +1,1599 @@
+{
+  "updated_at": "2026-07-15T00:07:01.072153+00:00",
+  "instruments": {
+    "XAU/USD": {
+      "meta": {
+        "symbol": "XAU/USD",
+        "interval": "1h",
+        "currency_base": "Gold Spot",
+        "currency_quote": "US Dollar",
+        "type": "Precious Metal"
+      },
+      "latest_close": 4056.15125,
+      "latest_datetime": "2026-07-15 10:00:00",
+      "signal": "HOLD",
+      "regime": "trending",
+      "trade_setup": {
+        "entry": null,
+        "stop_loss": null,
+        "take_profit": null,
+        "risk_reward": null
+      },
+      "indicators": {
+        "rsi": 55.0024521350766,
+        "rsi_ma": 58.730422373021085,
+        "macd": 4.937401717794657,
+        "macd_signal": 4.474536694304511,
+        "macd_histogram": 0.46286502349014597,
+        "alma": 4053.089754459676,
+        "adx": 32.39891669659528,
+        "atr": 13.900119347671602
+      },
+      "candles": [
+        {
+          "datetime": "2026-07-13 09:00:00",
+          "close": 4084.0945,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 10:00:00",
+          "close": 4076.90982,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 11:00:00",
+          "close": 4073.52891,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 12:00:00",
+          "close": 4070.44738,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 13:00:00",
+          "close": 4059.40809,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 14:00:00",
+          "close": 4058.53438,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 15:00:00",
+          "close": 4054.61334,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 16:00:00",
+          "close": 4052.84182,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 17:00:00",
+          "close": 4063.94247,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4057.2041880915995,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 18:00:00",
+          "close": 4074.80337,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4061.705115522402,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 19:00:00",
+          "close": 4069.97134,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4066.3301337921707,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 20:00:00",
+          "close": 4061.07949,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4067.2707473742566,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 21:00:00",
+          "close": 4056.76908,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4064.53821254862,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 22:00:00",
+          "close": 4066.08214,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4062.9481786914585,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 23:00:00",
+          "close": 4048.44624,
+          "rsi": 31.848688988760202,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4059.3092949393736,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 00:00:00",
+          "close": 4012.56192,
+          "rsi": 22.854518175497592,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4047.395787559925,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 01:00:00",
+          "close": 4012.94101,
+          "rsi": 23.101582061032673,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4033.067141558203,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 02:00:00",
+          "close": 3992.42364,
+          "rsi": 19.467653223537937,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4017.02598974741,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 03:00:00",
+          "close": 3993.40267,
+          "rsi": 20.113407934780415,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4005.0311404947734,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 04:00:00",
+          "close": 3999.3276,
+          "rsi": 24.080935766843442,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 3999.1760883932084,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 05:00:00",
+          "close": 4001.92332,
+          "rsi": 25.81912612070584,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 3998.3065469810294,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 06:00:00",
+          "close": 4001.23284,
+          "rsi": 25.650887065315377,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 3999.4862107034724,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 07:00:00",
+          "close": 4001.81595,
+          "rsi": 26.088892061023085,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4000.760952111613,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 08:00:00",
+          "close": 4001.9196,
+          "rsi": 26.172150256285022,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4001.4505654369173,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 09:00:00",
+          "close": 4000.59789,
+          "rsi": 25.773454633488186,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 4001.4508354686764,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 10:00:00",
+          "close": 4007.35985,
+          "rsi": 31.520977649169527,
+          "rsi_ma": null,
+          "macd": -26.39932603510719,
+          "macd_signal": null,
+          "alma": 4002.663226330674,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 11:00:00",
+          "close": 4010.55104,
+          "rsi": 34.113845480774856,
+          "rsi_ma": null,
+          "macd": -24.55509982501619,
+          "macd_signal": null,
+          "alma": 4005.097193847815,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 12:00:00",
+          "close": 4013.16784,
+          "rsi": 36.24559216720483,
+          "rsi_ma": 26.632265113172785,
+          "macd": -22.621615474374906,
+          "macd_signal": null,
+          "alma": 4008.2319398849845,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 13:00:00",
+          "close": 4014.96345,
+          "rsi": 37.734323452527505,
+          "rsi_ma": 27.052667574870448,
+          "macd": -20.70574157601635,
+          "macd_signal": null,
+          "alma": 4011.1870588779925,
+          "adx": 50.98056328088707
+        },
+        {
+          "datetime": "2026-07-14 14:00:00",
+          "close": 4020.73075,
+          "rsi": 42.387683408206435,
+          "rsi_ma": 28.447893662921082,
+          "macd": -18.50866838982641,
+          "macd_signal": null,
+          "alma": 4014.5033793648413,
+          "adx": 50.080517097232594
+        },
+        {
+          "datetime": "2026-07-14 15:00:00",
+          "close": 4031.9021,
+          "rsi": 50.157883645326606,
+          "rsi_ma": 30.38048663322779,
+          "macd": -15.685227934665335,
+          "macd_signal": null,
+          "alma": 4019.8118342872826,
+          "adx": 48.62878947005095
+        },
+        {
+          "datetime": "2026-07-14 16:00:00",
+          "close": 4024.38814,
+          "rsi": 45.693896181013436,
+          "rsi_ma": 32.2537897016189,
+          "macd": -13.89378589219252,
+          "macd_signal": null,
+          "alma": 4023.4916631895603,
+          "adx": 46.317369773267984
+        },
+        {
+          "datetime": "2026-07-14 17:00:00",
+          "close": 4020.80157,
+          "rsi": 43.694910281400624,
+          "rsi_ma": 33.938182726377484,
+          "macd": -12.618008840201654,
+          "macd_signal": null,
+          "alma": 4024.3687580047317,
+          "adx": 44.171051483398095
+        },
+        {
+          "datetime": "2026-07-14 18:00:00",
+          "close": 4016.46269,
+          "rsi": 41.33881641297968,
+          "rsi_ma": 35.170888486815784,
+          "macd": -11.820794923796257,
+          "macd_signal": -18.534252099021867,
+          "alma": 4022.3389392471304,
+          "adx": 42.32797340100371
+        },
+        {
+          "datetime": "2026-07-14 19:00:00",
+          "close": 4021.64272,
+          "rsi": 45.14194870503271,
+          "rsi_ma": 36.55109009998199,
+          "macd": -10.648265445999476,
+          "macd_signal": -16.95705476841739,
+          "alma": 4020.7887277669956,
+          "adx": 40.98844421950454
+        },
+        {
+          "datetime": "2026-07-14 20:00:00",
+          "close": 4022.03352,
+          "rsi": 45.429394755195624,
+          "rsi_ma": 37.963840649259154,
+          "macd": -9.577094311588901,
+          "macd_signal": -15.481062677051693,
+          "alma": 4020.50925034214,
+          "adx": 39.86344793655844
+        },
+        {
+          "datetime": "2026-07-14 21:00:00",
+          "close": 4031.45772,
+          "rsi": 51.96582892998485,
+          "rsi_ma": 39.81219328275642,
+          "macd": -7.876928957716353,
+          "macd_signal": -13.960235933184624,
+          "alma": 4023.166065169003,
+          "adx": 38.81880853096562
+        },
+        {
+          "datetime": "2026-07-14 22:00:00",
+          "close": 4070.41345,
+          "rsi": 68.67073063442066,
+          "rsi_ma": 42.84780616690897,
+          "macd": -3.347545401745368,
+          "macd_signal": -11.837697826896774,
+          "alma": 4035.172934196146,
+          "adx": 36.714873454966465
+        },
+        {
+          "datetime": "2026-07-14 23:00:00",
+          "close": 4077.5519,
+          "rsi": 70.68275848082733,
+          "rsi_ma": 46.05561358457605,
+          "macd": 0.8087145968272886,
+          "macd_signal": -9.30841534215196,
+          "alma": 4051.2241712588475,
+          "adx": 37.318910814504264
+        },
+        {
+          "datetime": "2026-07-15 00:00:00",
+          "close": 4086.44327,
+          "rsi": 73.00800079371145,
+          "rsi_ma": 49.018972380614755,
+          "macd": 4.765110611699572,
+          "macd_signal": -6.493710151381654,
+          "alma": 4067.060933679922,
+          "adx": 37.879802648360794
+        },
+        {
+          "datetime": "2026-07-15 01:00:00",
+          "close": 4068.05449,
+          "rsi": 62.04733013292758,
+          "rsi_ma": 51.01422128433995,
+          "macd": 6.343636599286693,
+          "macd_signal": -3.926240801247985,
+          "alma": 4073.8341526508575,
+          "adx": 38.400630779799
+        },
+        {
+          "datetime": "2026-07-15 02:00:00",
+          "close": 4061.23401,
+          "rsi": 58.5370314350388,
+          "rsi_ma": 52.60646694632809,
+          "macd": 6.963997454526897,
+          "macd_signal": -1.7481931500930084,
+          "alma": 4072.3818685052565,
+          "adx": 39.247381826710985
+        },
+        {
+          "datetime": "2026-07-15 03:00:00",
+          "close": 4062.66448,
+          "rsi": 59.06016853732701,
+          "rsi_ma": 54.12974159524234,
+          "macd": 7.484784934221907,
+          "macd_signal": 0.09840246676997483,
+          "alma": 4067.9904005704902,
+          "adx": 39.32427825536093
+        },
+        {
+          "datetime": "2026-07-15 04:00:00",
+          "close": 4053.67487,
+          "rsi": 54.41382649228356,
+          "rsi_ma": 54.98875181553357,
+          "macd": 7.090392732453361,
+          "macd_signal": 1.4968005199066519,
+          "alma": 4062.5576254903635,
+          "adx": 39.176301357611884
+        },
+        {
+          "datetime": "2026-07-15 05:00:00",
+          "close": 4055.73594,
+          "rsi": 55.28244900477046,
+          "rsi_ma": 55.354792198350985,
+          "macd": 6.865009637250615,
+          "macd_signal": 2.5704423433754444,
+          "alma": 4058.826553751903,
+          "adx": 38.008221127157256
+        },
+        {
+          "datetime": "2026-07-15 06:00:00",
+          "close": 4052.83213,
+          "rsi": 53.72910485923121,
+          "rsi_ma": 55.92873567536654,
+          "macd": 6.378550749131647,
+          "macd_signal": 3.332064024526685,
+          "alma": 4056.079941561029,
+          "adx": 36.92357519887797
+        },
+        {
+          "datetime": "2026-07-15 07:00:00",
+          "close": 4055.58304,
+          "rsi": 55.01856114414748,
+          "rsi_ma": 56.737567879848456,
+          "macd": 6.144177765572551,
+          "macd_signal": 3.8944867727358585,
+          "alma": 4054.987495637365,
+          "adx": 35.91640397976148
+        },
+        {
+          "datetime": "2026-07-15 08:00:00",
+          "close": 4049.28584,
+          "rsi": 51.48178093006935,
+          "rsi_ma": 57.462065345354866,
+          "macd": 5.388192348076706,
+          "macd_signal": 4.193227887804028,
+          "alma": 4053.490892626061,
+          "adx": 34.98117356201046
+        },
+        {
+          "datetime": "2026-07-15 09:00:00",
+          "close": 4052.87981,
+          "rsi": 53.325889712478855,
+          "rsi_ma": 58.04663256017244,
+          "macd": 5.02119064094376,
+          "macd_signal": 4.358820438431975,
+          "alma": 4052.684137298516,
+          "adx": 33.74802653773928
+        },
+        {
+          "datetime": "2026-07-15 10:00:00",
+          "close": 4056.15125,
+          "rsi": 55.0024521350766,
+          "rsi_ma": 58.730422373021085,
+          "macd": 4.937401717794657,
+          "macd_signal": 4.474536694304511,
+          "alma": 4053.089754459676,
+          "adx": 32.39891669659528
+        }
+      ]
+    },
+    "EUR/USD": {
+      "meta": {
+        "symbol": "EUR/USD",
+        "interval": "1h",
+        "currency_base": "Euro",
+        "currency_quote": "US Dollar",
+        "type": "Physical Currency"
+      },
+      "latest_close": 1.14272,
+      "latest_datetime": "2026-07-15 10:00:00",
+      "signal": "HOLD",
+      "regime": "transitional",
+      "trade_setup": {
+        "entry": null,
+        "stop_loss": null,
+        "take_profit": null,
+        "risk_reward": null
+      },
+      "indicators": {
+        "rsi": 58.22394284228381,
+        "rsi_ma": 60.190835658503254,
+        "macd": 0.0005513424515385482,
+        "macd_signal": 0.0005481482256654645,
+        "macd_histogram": 3.194225873083588e-06,
+        "alma": 1.1423165434572833,
+        "adx": 23.119334521161242,
+        "atr": 0.0010691032737351596
+      },
+      "candles": [
+        {
+          "datetime": "2026-07-13 09:00:00",
+          "close": 1.1404,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 10:00:00",
+          "close": 1.13963,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 11:00:00",
+          "close": 1.1397,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 12:00:00",
+          "close": 1.13956,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 13:00:00",
+          "close": 1.13989,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 14:00:00",
+          "close": 1.14052,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 15:00:00",
+          "close": 1.13979,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 16:00:00",
+          "close": 1.14019,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 17:00:00",
+          "close": 1.14237,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.140589391322342,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 18:00:00",
+          "close": 1.14364,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.141560186469471,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 19:00:00",
+          "close": 1.14305,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1424150381550318,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 20:00:00",
+          "close": 1.14351,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1430090739345513,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 21:00:00",
+          "close": 1.14276,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1431340626844542,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 22:00:00",
+          "close": 1.14293,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.143074676245974,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 23:00:00",
+          "close": 1.14158,
+          "rsi": 55.99593495934959,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1426868747828813,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 00:00:00",
+          "close": 1.14036,
+          "rsi": 49.4,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1419654752413282,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 01:00:00",
+          "close": 1.14042,
+          "rsi": 49.71372234758219,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1412460749202102,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 02:00:00",
+          "close": 1.13884,
+          "rsi": 42.27979471189995,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1403955454263133,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 03:00:00",
+          "close": 1.13873,
+          "rsi": 41.81103183198109,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.139660333596381,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 04:00:00",
+          "close": 1.13872,
+          "rsi": 41.76569699322389,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1391365237522495,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 05:00:00",
+          "close": 1.13832,
+          "rsi": 39.901978580536365,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1387686467614049,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 06:00:00",
+          "close": 1.13805,
+          "rsi": 38.648318989141295,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.138484133474004,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 07:00:00",
+          "close": 1.13843,
+          "rsi": 41.43708697069816,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1383544904126905,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 08:00:00",
+          "close": 1.13818,
+          "rsi": 40.14423097158361,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1382787516889457,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 09:00:00",
+          "close": 1.13833,
+          "rsi": 41.32709403473042,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 1.1382749040083733,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 10:00:00",
+          "close": 1.13866,
+          "rsi": 43.95131988660102,
+          "rsi_ma": null,
+          "macd": -0.0011973451219443906,
+          "macd_signal": null,
+          "alma": 1.1383638003342595,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 11:00:00",
+          "close": 1.13905,
+          "rsi": 46.97002298378674,
+          "rsi_ma": null,
+          "macd": -0.0011090487652481464,
+          "macd_signal": null,
+          "alma": 1.1385678164598425,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 12:00:00",
+          "close": 1.13913,
+          "rsi": 47.593542253358585,
+          "rsi_ma": 44.352841108176634,
+          "macd": -0.0010208502092582325,
+          "macd_signal": null,
+          "alma": 1.1388027073196798,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 13:00:00",
+          "close": 1.13935,
+          "rsi": 49.35700072351027,
+          "rsi_ma": 43.8786315199024,
+          "macd": -0.0009225652983344171,
+          "macd_signal": null,
+          "alma": 1.1390323180325197,
+          "adx": 11.338116855838624
+        },
+        {
+          "datetime": "2026-07-14 14:00:00",
+          "close": 1.13905,
+          "rsi": 47.03284645719617,
+          "rsi_ma": 43.70954912398784,
+          "macd": -0.0008589795100227735,
+          "macd_signal": null,
+          "alma": 1.1391300841541137,
+          "adx": 11.037341825929227
+        },
+        {
+          "datetime": "2026-07-14 15:00:00",
+          "close": 1.13914,
+          "rsi": 47.82657405967434,
+          "rsi_ma": 43.574752817708706,
+          "macd": -0.0007921931572427363,
+          "macd_signal": null,
+          "alma": 1.1391544296299811,
+          "adx": 10.661003553327188
+        },
+        {
+          "datetime": "2026-07-14 16:00:00",
+          "close": 1.13877,
+          "rsi": 44.85093501776244,
+          "rsi_ma": 43.75840569669889,
+          "macd": -0.0007603554944407955,
+          "macd_signal": null,
+          "alma": 1.1390631009774896,
+          "adx": 10.539920452224655
+        },
+        {
+          "datetime": "2026-07-14 17:00:00",
+          "close": 1.13956,
+          "rsi": 51.75317097061852,
+          "rsi_ma": 44.46855849231584,
+          "macd": -0.000663726493733397,
+          "macd_signal": null,
+          "alma": 1.1391187419942133,
+          "adx": 10.029178252904739
+        },
+        {
+          "datetime": "2026-07-14 18:00:00",
+          "close": 1.14003,
+          "rsi": 55.33476777786278,
+          "rsi_ma": 45.43777783407577,
+          "macd": -0.0005429632995183879,
+          "macd_signal": -0.0008742252610825863,
+          "alma": 1.1393629186361696,
+          "adx": 9.626626888683125
+        },
+        {
+          "datetime": "2026-07-14 19:00:00",
+          "close": 1.14014,
+          "rsi": 56.15513104519993,
+          "rsi_ma": 46.598717295837446,
+          "macd": -0.0004333857165918892,
+          "macd_signal": -0.0007860573521844469,
+          "alma": 1.139683511724643,
+          "adx": 10.166294520170462
+        },
+        {
+          "datetime": "2026-07-14 20:00:00",
+          "close": 1.13918,
+          "rsi": 47.88845908877224,
+          "rsi_ma": 47.25872730295394,
+          "macd": -0.0004191766619732148,
+          "macd_signal": -0.0007126812141422004,
+          "alma": 1.1397264197776489,
+          "adx": 10.667414463694417
+        },
+        {
+          "datetime": "2026-07-14 21:00:00",
+          "close": 1.14065,
+          "rsi": 58.067800626488385,
+          "rsi_ma": 48.44663542122468,
+          "macd": -0.00028600231249165266,
+          "macd_signal": -0.0006273454338120909,
+          "alma": 1.1398976328007124,
+          "adx": 10.51628175544707
+        },
+        {
+          "datetime": "2026-07-14 22:00:00",
+          "close": 1.14427,
+          "rsi": 72.3773732928334,
+          "rsi_ma": 50.749002729885376,
+          "macd": 0.00011037077969466128,
+          "macd_signal": -0.00047980219111074044,
+          "alma": 1.140935564224722,
+          "adx": 11.222794899406736
+        },
+        {
+          "datetime": "2026-07-14 23:00:00",
+          "close": 1.14524,
+          "rsi": 74.85366377054339,
+          "rsi_ma": 53.14375771101487,
+          "macd": 0.000497040629359783,
+          "macd_signal": -0.0002844336270166358,
+          "alma": 1.1424970624462325,
+          "adx": 14.654154415758981
+        },
+        {
+          "datetime": "2026-07-15 00:00:00",
+          "close": 1.14463,
+          "rsi": 70.56921751596006,
+          "rsi_ma": 55.04503611311195,
+          "macd": 0.0007456618434351941,
+          "macd_signal": -7.841453292626982e-05,
+          "alma": 1.1437764094688587,
+          "adx": 17.840416823800354
+        },
+        {
+          "datetime": "2026-07-15 01:00:00",
+          "close": 1.14272,
+          "rsi": 59.15246250521627,
+          "rsi_ma": 55.915210364642626,
+          "macd": 0.0007795883006915966,
+          "macd_signal": 9.318603379730347e-05,
+          "alma": 1.144028872642266,
+          "adx": 20.898900494318404
+        },
+        {
+          "datetime": "2026-07-15 02:00:00",
+          "close": 1.14326,
+          "rsi": 61.07005468293573,
+          "rsi_ma": 56.877818395326706,
+          "macd": 0.0008403615842891588,
+          "macd_signal": 0.00024262114389567453,
+          "alma": 1.1437646462140578,
+          "adx": 22.107966622440046
+        },
+        {
+          "datetime": "2026-07-15 03:00:00",
+          "close": 1.14236,
+          "rsi": 56.32415567240578,
+          "rsi_ma": 57.375472320247816,
+          "macd": 0.0008066043382839535,
+          "macd_signal": 0.00035541778277333033,
+          "alma": 1.143234025957812,
+          "adx": 23.04095979182624
+        },
+        {
+          "datetime": "2026-07-15 04:00:00",
+          "close": 1.14231,
+          "rsi": 56.06349080679422,
+          "rsi_ma": 58.0205183452191,
+          "macd": 0.0007669756773022804,
+          "macd_signal": 0.00043772936167912034,
+          "alma": 1.1427983811134301,
+          "adx": 23.44541802847242
+        },
+        {
+          "datetime": "2026-07-15 05:00:00",
+          "close": 1.14222,
+          "rsi": 55.56501233020976,
+          "rsi_ma": 58.57326393597164,
+          "macd": 0.0007200076303530803,
+          "macd_signal": 0.0004941850154139123,
+          "alma": 1.1424996201871818,
+          "adx": 23.502907220316654
+        },
+        {
+          "datetime": "2026-07-15 06:00:00",
+          "close": 1.14211,
+          "rsi": 54.92225140657086,
+          "rsi_ma": 59.29264367802938,
+          "macd": 0.0006662291590355808,
+          "macd_signal": 0.000528593844138246,
+          "alma": 1.1423064888400143,
+          "adx": 23.55629004131487
+        },
+        {
+          "datetime": "2026-07-15 07:00:00",
+          "close": 1.14199,
+          "rsi": 54.18586241873198,
+          "rsi_ma": 59.46640735289463,
+          "macd": 0.0006069300244245987,
+          "macd_signal": 0.0005442610801955166,
+          "alma": 1.1421710445204853,
+          "adx": 23.315213340883112
+        },
+        {
+          "datetime": "2026-07-15 08:00:00",
+          "close": 1.14209,
+          "rsi": 54.73057495385828,
+          "rsi_ma": 59.42325072260859,
+          "macd": 0.0005615312149781074,
+          "macd_signal": 0.0005477151071520347,
+          "alma": 1.1421016544689124,
+          "adx": 23.306347979804347
+        },
+        {
+          "datetime": "2026-07-15 09:00:00",
+          "close": 1.14242,
+          "rsi": 56.565836394213655,
+          "rsi_ma": 59.452586818966715,
+          "macd": 0.0005458879173778295,
+          "macd_signal": 0.0005473496691971937,
+          "alma": 1.1421496841384131,
+          "adx": 23.100178745840715
+        },
+        {
+          "datetime": "2026-07-15 10:00:00",
+          "close": 1.14272,
+          "rsi": 58.22394284228381,
+          "rsi_ma": 60.190835658503254,
+          "macd": 0.0005513424515385482,
+          "macd_signal": 0.0005481482256654645,
+          "alma": 1.1423165434572833,
+          "adx": 23.119334521161242
+        }
+      ]
+    },
+    "BTC/USD": {
+      "meta": {
+        "symbol": "BTC/USD",
+        "interval": "1h",
+        "currency_base": "Bitcoin",
+        "currency_quote": "US Dollar",
+        "exchange": "Binance",
+        "type": "Digital Currency"
+      },
+      "latest_close": 64972.12,
+      "latest_datetime": "2026-07-15 00:00:00",
+      "signal": "BUY",
+      "regime": "trending",
+      "trade_setup": {
+        "entry": 64972.12,
+        "stop_loss": 64426.889943628616,
+        "take_profit": 66062.58011274277,
+        "risk_reward": 2.0
+      },
+      "indicators": {
+        "rsi": 73.76424289782351,
+        "rsi_ma": 70.67385922520127,
+        "macd": 559.6148960841904,
+        "macd_signal": 464.9915346241233,
+        "macd_histogram": 94.62336146006706,
+        "alma": 64893.81942268499,
+        "adx": 35.5529847224506,
+        "atr": 363.4867042475885
+      },
+      "candles": [
+        {
+          "datetime": "2026-07-12 23:00:00",
+          "close": 63780.0,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 00:00:00",
+          "close": 64072.01,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 01:00:00",
+          "close": 63412.01,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 02:00:00",
+          "close": 63375.99,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 03:00:00",
+          "close": 62806.41,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 04:00:00",
+          "close": 62672.0,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 05:00:00",
+          "close": 62799.0,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 06:00:00",
+          "close": 62797.55,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": null,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 07:00:00",
+          "close": 62985.52,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62829.73068162333,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 08:00:00",
+          "close": 63206.97,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62939.19834070471,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 09:00:00",
+          "close": 63100.02,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 63035.60914475287,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 10:00:00",
+          "close": 62867.89,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 63039.48700566341,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 11:00:00",
+          "close": 62901.99,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62991.88837168284,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 12:00:00",
+          "close": 62625.15,
+          "rsi": null,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62878.27145066389,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 13:00:00",
+          "close": 62318.0,
+          "rsi": 27.063500530269277,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62699.28931548857,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 14:00:00",
+          "close": 62791.85,
+          "rsi": 37.13000627474739,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62630.23670488742,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 15:00:00",
+          "close": 62618.01,
+          "rsi": 35.210038910562524,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62611.511296105666,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 16:00:00",
+          "close": 62276.0,
+          "rsi": 31.73340275518268,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62548.45774766171,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 17:00:00",
+          "close": 61904.99,
+          "rsi": 28.451474991821435,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62368.2756913777,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 18:00:00",
+          "close": 62020.0,
+          "rsi": 30.839320883077814,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62187.14650585827,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 19:00:00",
+          "close": 62288.23,
+          "rsi": 36.188202854708095,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62128.601461024155,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 20:00:00",
+          "close": 62210.99,
+          "rsi": 35.34059071332835,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62148.23650509381,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 21:00:00",
+          "close": 62065.06,
+          "rsi": 33.73301190257216,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62156.298968019226,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 22:00:00",
+          "close": 61924.0,
+          "rsi": 32.20788944548406,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62101.5011877782,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-13 23:00:00",
+          "close": 62334.52,
+          "rsi": 40.62169577361564,
+          "rsi_ma": null,
+          "macd": null,
+          "macd_signal": null,
+          "alma": 62114.6513804027,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 00:00:00",
+          "close": 62549.54,
+          "rsi": 44.50663004893684,
+          "rsi_ma": null,
+          "macd": -357.82392691026905,
+          "macd_signal": null,
+          "alma": 62226.20366809068,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 01:00:00",
+          "close": 62540.42,
+          "rsi": 44.37401729383903,
+          "rsi_ma": null,
+          "macd": -317.0495511287637,
+          "macd_signal": null,
+          "alma": 62367.9663325668,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 02:00:00",
+          "close": 62544.0,
+          "rsi": 44.443995766631296,
+          "rsi_ma": 35.84598415319833,
+          "macd": -281.20513077426506,
+          "macd_signal": null,
+          "alma": 62473.92700566649,
+          "adx": null
+        },
+        {
+          "datetime": "2026-07-14 03:00:00",
+          "close": 62572.89,
+          "rsi": 45.044816108120614,
+          "rsi_ma": 37.13036383733057,
+          "macd": -247.61266319425314,
+          "macd_signal": null,
+          "alma": 62530.57229043742,
+          "adx": 31.885552342146738
+        },
+        {
+          "datetime": "2026-07-14 04:00:00",
+          "close": 62745.23,
+          "rsi": 48.61486648835233,
+          "rsi_ma": 37.950710995445206,
+          "macd": -204.72406137863976,
+          "macd_signal": null,
+          "alma": 62593.04484402149,
+          "adx": 30.97744547489031
+        },
+        {
+          "datetime": "2026-07-14 05:00:00",
+          "close": 62737.0,
+          "rsi": 48.45298965929588,
+          "rsi_ma": 38.89663604892616,
+          "macd": -169.44536694898667,
+          "macd_signal": null,
+          "alma": 62654.10268573229,
+          "adx": 29.496458445489214
+        },
+        {
+          "datetime": "2026-07-14 06:00:00",
+          "close": 62624.05,
+          "rsi": 46.1802835978286,
+          "rsi_ma": 39.928556109115156,
+          "macd": -148.88461926821589,
+          "macd_signal": null,
+          "alma": 62676.919878629626,
+          "adx": 27.743380206230135
+        },
+        {
+          "datetime": "2026-07-14 07:00:00",
+          "close": 62560.92,
+          "rsi": 44.91227561134754,
+          "rsi_ma": 41.10432758193845,
+          "macd": -136.11509194831606,
+          "macd_signal": null,
+          "alma": 62653.91804330059,
+          "adx": 26.536071444099424
+        },
+        {
+          "datetime": "2026-07-14 08:00:00",
+          "close": 62713.85,
+          "rsi": 48.5945499514485,
+          "rsi_ma": 42.37255822967921,
+          "macd": -112.35976322818584,
+          "macd_signal": -219.46890830887725,
+          "alma": 62647.19877872427,
+          "adx": 25.56950610553206
+        },
+        {
+          "datetime": "2026-07-14 09:00:00",
+          "close": 62629.55,
+          "rsi": 46.73987245943179,
+          "rsi_ma": 43.126248915730905,
+          "macd": -99.19237163004182,
+          "macd_signal": -195.41360097311016,
+          "alma": 62643.04485581024,
+          "adx": 24.06792483864859
+        },
+        {
+          "datetime": "2026-07-14 10:00:00",
+          "close": 62800.0,
+          "rsi": 50.82650881772615,
+          "rsi_ma": 44.232385923187884,
+          "macd": -74.14849078670912,
+          "macd_signal": -171.16057893582996,
+          "alma": 62680.41385707162,
+          "adx": 22.673599376542516
+        },
+        {
+          "datetime": "2026-07-14 11:00:00",
+          "close": 62844.99,
+          "rsi": 51.876119171440095,
+          "rsi_ma": 45.528322156678456,
+          "macd": -50.09327370675661,
+          "macd_signal": -146.94711789001528,
+          "alma": 62737.29889697828,
+          "adx": 21.378832434332743
+        },
+        {
+          "datetime": "2026-07-14 12:00:00",
+          "close": 63960.0,
+          "rsi": 69.34194473282572,
+          "rsi_ma": 48.180754677202856,
+          "macd": 58.2709365263316,
+          "macd_signal": -105.9035070067459,
+          "alma": 63036.25347795475,
+          "adx": 20.23071885549995
+        },
+        {
+          "datetime": "2026-07-14 13:00:00",
+          "close": 63840.01,
+          "rsi": 66.54307728584604,
+          "rsi_ma": 50.03228192807646,
+          "macd": 132.93576293087273,
+          "macd_signal": -58.135653019222175,
+          "alma": 63379.64114997201,
+          "adx": 21.80394631117493
+        },
+        {
+          "datetime": "2026-07-14 14:00:00",
+          "close": 64305.02,
+          "rsi": 71.36656985156765,
+          "rsi_ma": 51.9508490568358,
+          "macd": 227.01372364177107,
+          "macd_signal": -1.1057776870235287,
+          "alma": 63754.65696462021,
+          "adx": 23.555524924965574
+        },
+        {
+          "datetime": "2026-07-14 15:00:00",
+          "close": 64743.99,
+          "rsi": 75.0267901021715,
+          "rsi_ma": 54.14033282885955,
+          "macd": 333.15202649342336,
+          "macd_signal": 65.74578314906586,
+          "alma": 64128.91417116458,
+          "adx": 25.415588303185036
+        },
+        {
+          "datetime": "2026-07-14 16:00:00",
+          "close": 64730.0,
+          "rsi": 74.6990598479375,
+          "rsi_ma": 56.301408834667136,
+          "macd": 411.3962007903769,
+          "macd_signal": 134.87586667732805,
+          "alma": 64422.803340760336,
+          "adx": 27.856576260656766
+        },
+        {
+          "datetime": "2026-07-14 17:00:00",
+          "close": 64621.43,
+          "rsi": 72.06806593953348,
+          "rsi_ma": 58.23164096548234,
+          "macd": 459.3494860567607,
+          "macd_signal": 199.7705905532146,
+          "alma": 64586.397550244415,
+          "adx": 30.123207935451948
+        },
+        {
+          "datetime": "2026-07-14 18:00:00",
+          "close": 64571.98,
+          "rsi": 70.84415484451237,
+          "rsi_ma": 59.81944727663663,
+          "macd": 487.74024247849434,
+          "macd_signal": 257.3645209382705,
+          "alma": 64629.29953136095,
+          "adx": 30.838556744896252
+        },
+        {
+          "datetime": "2026-07-14 19:00:00",
+          "close": 64569.59,
+          "rsi": 70.7815880946473,
+          "rsi_ma": 61.41434716487602,
+          "macd": 504.2347639772487,
+          "macd_signal": 306.7385695460662,
+          "alma": 64612.25018132269,
+          "adx": 31.50280921080882
+        },
+        {
+          "datetime": "2026-07-14 20:00:00",
+          "close": 64572.02,
+          "rsi": 70.8098154031156,
+          "rsi_ma": 63.17359943668223,
+          "macd": 511.6054031688397,
+          "macd_signal": 347.71193627062087,
+          "alma": 64588.473374669,
+          "adx": 32.206823490750224
+        },
+        {
+          "datetime": "2026-07-14 21:00:00",
+          "close": 64676.9,
+          "rsi": 72.0642396691566,
+          "rsi_ma": 65.11302544081146,
+          "macd": 519.9163552059114,
+          "macd_signal": 382.152820057679,
+          "alma": 64599.32096129807,
+          "adx": 32.59649650056557
+        },
+        {
+          "datetime": "2026-07-14 22:00:00",
+          "close": 64860.89,
+          "rsi": 74.16198594770736,
+          "rsi_ma": 66.93927086911566,
+          "macd": 535.1800771129515,
+          "macd_signal": 412.7582714687335,
+          "alma": 64667.82832402955,
+          "adx": 33.44691810589409
+        },
+        {
+          "datetime": "2026-07-14 23:00:00",
+          "close": 65043.98,
+          "rsi": 76.08637536453308,
+          "rsi_ma": 69.03544964805147,
+          "macd": 555.6453854205988,
+          "macd_signal": 441.33569425910656,
+          "alma": 64790.61625667105,
+          "adx": 34.53895264781228
+        },
+        {
+          "datetime": "2026-07-15 00:00:00",
+          "close": 64972.12,
+          "rsi": 73.76424289782351,
+          "rsi_ma": 70.67385922520127,
+          "macd": 559.6148960841904,
+          "macd_signal": 464.9915346241233,
+          "alma": 64893.81942268499,
+          "adx": 35.5529847224506
+        }
+      ]
+    }
+  }
+}
