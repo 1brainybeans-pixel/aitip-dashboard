@@ -33,6 +33,7 @@ jobs:
           for attempt in 1 2 3; do
             git pull --rebase origin main
             python fetch_market_data.py gold
+            touch data/signal_log.jsonl
             git add data/latest.json data/signal_log.jsonl
             if git diff --staged --quiet; then
               echo "No changes to commit"
