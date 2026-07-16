@@ -1,4 +1,5 @@
 name: Fetch Gold Data
+# resync trigger
 
 on:
   schedule:
