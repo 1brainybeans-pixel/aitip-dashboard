@@ -1,5 +1,4 @@
 name: Fetch Gold Data
-# resync trigger
 
 on:
   schedule:
@@ -31,23 +30,30 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for attempt in 1 2 3; do
+          success=false
+          for attempt in 1 2 3 4 5; do
             git pull --rebase origin main
             python fetch_market_data.py gold
             touch data/signal_log.jsonl
             git add data/latest.json data/signal_log.jsonl
             if git diff --staged --quiet; then
               echo "No changes to commit"
+              success=true
               break
             fi
             git commit -m "Update gold data"
             if git push origin main; then
               echo "Push succeeded"
+              success=true
               break
             else
-              echo "Push failed, retrying (likely race with crypto workflow)..."
+              echo "Push failed, retrying (attempt $attempt)..."
               git fetch origin main
               git reset --hard origin/main
-              sleep 5
+              sleep $((RANDOM % 8 + 3))
             fi
           done
+          if [ "$success" = false ]; then
+            echo "::error::Failed to push gold data after all retry attempts"
+            exit 1
+          fi
