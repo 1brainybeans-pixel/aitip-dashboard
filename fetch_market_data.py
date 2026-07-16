@@ -1,11 +1,9 @@
 """Fetches market data for one instrument group (gold or crypto) from Twelve
-Data, computes indicators, builds a trade setup, and merges the result into
-data/latest.json - preserving whatever the OTHER group last wrote, since gold
-and crypto run on separate schedules and both touch this same file. Notifies
-via ntfy.sh only when a real BUY/SELL setup forms (not on reverting to HOLD),
-and appends every fired setup to data/signal_log.jsonl - an append-only
-record for later analysis, never overwritten. Standalone - no MT5, safe for
-GitHub Actions.
+Data, computes indicators, builds a trade setup, and writes the group's own
+file (data/gold.json or data/crypto.json). Each group owns its file
+exclusively - gold and crypto never touch the same file, so there's nothing
+for their separate schedules to collide over. Notifies via ntfy.sh only when
+a real BUY/SELL setup forms. Standalone - no MT5, safe for GitHub Actions.
 
 Usage: python fetch_market_data.py <gold|crypto>
 """
@@ -38,8 +36,12 @@ GROUPS = {
     "crypto": {"BTC/USD": "15min", "ETH/USD": "15min", "SOL/USD": "15min"},
 }
 
+DATA_PATHS = {
+    "gold": "data/gold.json",
+    "crypto": "data/crypto.json",
+}
+
 OUTPUTSIZE = 50
-DATA_PATH = "data/latest.json"
 LOG_PATH = "data/signal_log.jsonl"
 
 STOP_ATR_MULT = Decimal("1.5")
@@ -109,19 +111,21 @@ def build_trade_setup(signal: str | None, price: Decimal, atr: Decimal | None) -
     }
 
 
-def load_existing_data() -> dict:
-    if not os.path.exists(DATA_PATH):
-        return {"updated_at": None, "instruments": {}}
+def load_previous_signals(data_path: str) -> dict[str, str | None]:
+    if not os.path.exists(data_path):
+        return {}
     try:
-        with open(DATA_PATH) as f:
-            return json.load(f)
+        with open(data_path) as f:
+            previous = json.load(f)
+        return {
+            symbol: info.get("signal")
+            for symbol, info in previous.get("instruments", {}).items()
+        }
     except (json.JSONDecodeError, KeyError):
-        return {"updated_at": None, "instruments": {}}
+        return {}
 
 
 def append_to_log(symbol: str, signal: str, regime: str | None, trade_setup: dict, indicators: dict) -> None:
-    """Appends one line per fired setup. Never overwrites - this file only
-    ever grows, so it becomes a real history to analyze later."""
     entry = {
         "logged_at": datetime.now(timezone.utc).isoformat(),
         "symbol": symbol,
@@ -156,12 +160,10 @@ def main() -> None:
         raise SystemExit(f"Usage: python fetch_market_data.py <{'|'.join(GROUPS)}>")
     group_name = sys.argv[1]
     instruments = GROUPS[group_name]
+    data_path = DATA_PATHS[group_name]
 
-    output = load_existing_data()
-    output.setdefault("instruments", {})
-    previous_signals = {
-        symbol: info.get("signal") for symbol, info in output["instruments"].items()
-    }
+    previous_signals = load_previous_signals(data_path)
+    output = {"updated_at": None, "instruments": {}}
 
     for symbol, interval in instruments.items():
         print(f"Fetching {symbol} ({interval})...")
@@ -197,7 +199,6 @@ def main() -> None:
 
         regime = determine_regime(adx[latest_idx])
         trade_setup = build_trade_setup(signal, price, atr[latest_idx])
-
         indicators_dict = {
             "rsi": to_num(rsi[latest_idx]),
             "rsi_ma": to_num(rsi_ma[latest_idx]),
@@ -254,10 +255,10 @@ def main() -> None:
 
     output["updated_at"] = datetime.now(timezone.utc).isoformat()
 
-    with open(DATA_PATH, "w") as f:
+    with open(data_path, "w") as f:
         json.dump(output, f, indent=2)
 
-    print(f"\nWrote {DATA_PATH} (group: {group_name})")
+    print(f"\nWrote {data_path} (group: {group_name})")
 
 
 if __name__ == "__main__":

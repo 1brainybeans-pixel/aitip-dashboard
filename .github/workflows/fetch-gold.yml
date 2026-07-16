@@ -23,33 +23,32 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Fetch data and push (with retry on race)
+      - name: Fetch gold data
         env:
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python fetch_market_data.py gold
+
+      - name: Commit and push (with retry)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          touch data/signal_log.jsonl
+          git add data/gold.json data/signal_log.jsonl
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update gold data"
           success=false
           for attempt in 1 2 3 4 5; do
-            git pull --rebase origin main
-            python fetch_market_data.py gold
-            touch data/signal_log.jsonl
-            git add data/latest.json data/signal_log.jsonl
-            if git diff --staged --quiet; then
-              echo "No changes to commit"
-              success=true
-              break
-            fi
-            git commit -m "Update gold data"
             if git push origin main; then
               echo "Push succeeded"
               success=true
               break
             else
-              echo "Push failed, retrying (attempt $attempt)..."
-              git fetch origin main
-              git reset --hard origin/main
+              echo "Push failed, pulling and retrying (attempt $attempt)..."
+              git pull --rebase origin main
               sleep $((RANDOM % 8 + 3))
             fi
           done
