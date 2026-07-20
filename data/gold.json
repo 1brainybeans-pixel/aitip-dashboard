@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T04:56:56.236754+00:00",
+  "updated_at": "2026-07-20T05:00:41.190534+00:00",
   "instruments": {
     "XAU/USD": {
       "interval": "5min",
@@ -10,25 +10,25 @@
         "currency_quote": "US Dollar",
         "type": "Precious Metal"
       },
-      "latest_close": 4021.54185,
+      "latest_close": 4019.04179,
       "latest_datetime": "2026-07-20 14:55:00",
-      "signal": "HOLD",
+      "signal": "SELL",
       "regime": "trending",
       "trade_setup": {
-        "entry": null,
-        "stop_loss": null,
-        "take_profit": null,
-        "risk_reward": null
+        "entry": 4019.04179,
+        "stop_loss": 4023.9866582088157,
+        "take_profit": 4009.152053582369,
+        "risk_reward": 2.0
       },
       "indicators": {
-        "rsi": 51.9858981327946,
-        "rsi_ma": 55.92321988118425,
-        "macd": 1.7623788220884145,
-        "macd_signal": 2.8974245219335026,
-        "macd_histogram": -1.135045699845088,
-        "alma": 4021.5159090870484,
+        "rsi": 47.51172410414791,
+        "rsi_ma": 55.6036360219952,
+        "macd": 1.5629438363334287,
+        "macd_signal": 2.8575375247825057,
+        "macd_histogram": -1.2945936884490767,
+        "alma": 4020.964712284858,
         "adx": 25.141860330783395,
-        "atr": 3.1294145201627854
+        "atr": 3.296578805877071
       },
       "candles": [
         {
@@ -523,12 +523,12 @@
         },
         {
           "datetime": "2026-07-20 14:55:00",
-          "close": 4021.54185,
-          "rsi": 51.9858981327946,
-          "rsi_ma": 55.92321988118425,
-          "macd": 1.7623788220884145,
-          "macd_signal": 2.8974245219335026,
-          "alma": 4021.5159090870484,
+          "close": 4019.04179,
+          "rsi": 47.51172410414791,
+          "rsi_ma": 55.6036360219952,
+          "macd": 1.5629438363334287,
+          "macd_signal": 2.8575375247825057,
+          "alma": 4020.964712284858,
           "adx": 25.141860330783395
         }
       ]
