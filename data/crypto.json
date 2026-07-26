@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T07:18:16.351164+00:00",
+  "updated_at": "2026-07-26T07:30:35.733223+00:00",
   "instruments": {
     "BTC/USD": {
       "interval": "15min",
@@ -11,25 +11,25 @@
         "exchange": "Binance",
         "type": "Digital Currency"
       },
-      "latest_close": 64437.68,
+      "latest_close": 64367.98,
       "latest_datetime": "2026-07-26 07:15:00",
-      "signal": "HOLD",
+      "signal": "SELL",
       "regime": "transitional",
       "trade_setup": {
-        "entry": null,
-        "stop_loss": null,
-        "take_profit": null,
-        "risk_reward": null
+        "entry": 64367.98,
+        "stop_loss": 64462.23560555558,
+        "take_profit": 64179.46878888884,
+        "risk_reward": 2.0
       },
       "indicators": {
-        "rsi": 48.02496064554896,
-        "rsi_ma": 47.67063973441586,
-        "macd": -11.933126346475873,
-        "macd_signal": 1.202025101942429,
-        "macd_histogram": -13.135151448418302,
-        "alma": 64417.11112793394,
+        "rsi": 41.75358661839157,
+        "rsi_ma": 47.22268444676176,
+        "macd": -17.493240306589833,
+        "macd_signal": 0.09000230991963709,
+        "macd_histogram": -17.58324261650947,
+        "alma": 64401.74412989682,
         "adx": 21.827052864302576,
-        "atr": 57.82492751324396
+        "atr": 62.83707037038682
       },
       "candles": [
         {
@@ -524,12 +524,12 @@
         },
         {
           "datetime": "2026-07-26 07:15:00",
-          "close": 64437.68,
-          "rsi": 48.02496064554896,
-          "rsi_ma": 47.67063973441586,
-          "macd": -11.933126346475873,
-          "macd_signal": 1.202025101942429,
-          "alma": 64417.11112793394,
+          "close": 64367.98,
+          "rsi": 41.75358661839157,
+          "rsi_ma": 47.22268444676176,
+          "macd": -17.493240306589833,
+          "macd_signal": 0.09000230991963709,
+          "alma": 64401.74412989682,
           "adx": 21.827052864302576
         }
       ]
@@ -544,25 +544,25 @@
         "exchange": "Binance",
         "type": "Digital Currency"
       },
-      "latest_close": 1884.87,
+      "latest_close": 1883.18,
       "latest_datetime": "2026-07-26 07:15:00",
-      "signal": "HOLD",
+      "signal": "SELL",
       "regime": "transitional",
       "trade_setup": {
-        "entry": null,
-        "stop_loss": null,
-        "take_profit": null,
-        "risk_reward": null
+        "entry": 1883.18,
+        "stop_loss": 1887.7099765382636,
+        "take_profit": 1874.1200469234727,
+        "risk_reward": 2.0
       },
       "indicators": {
-        "rsi": 56.21693006967343,
-        "rsi_ma": 57.56387396110649,
-        "macd": 1.5559265146115606,
-        "macd_signal": 1.8637297098322363,
-        "macd_histogram": -0.3078031952206756,
-        "alma": 1884.1212113227987,
+        "rsi": 52.36599234562049,
+        "rsi_ma": 57.28880698081699,
+        "macd": 1.4211116997967457,
+        "macd_signal": 1.8367667468692732,
+        "macd_histogram": -0.4156550470725275,
+        "alma": 1883.7486112269203,
         "adx": 24.485179643851993,
-        "atr": 2.909270073128131
+        "atr": 3.0199843588424167
       },
       "candles": [
         {
@@ -1057,12 +1057,12 @@
         },
         {
           "datetime": "2026-07-26 07:15:00",
-          "close": 1884.87,
-          "rsi": 56.21693006967343,
-          "rsi_ma": 57.56387396110649,
-          "macd": 1.5559265146115606,
-          "macd_signal": 1.8637297098322363,
-          "alma": 1884.1212113227987,
+          "close": 1883.18,
+          "rsi": 52.36599234562049,
+          "rsi_ma": 57.28880698081699,
+          "macd": 1.4211116997967457,
+          "macd_signal": 1.8367667468692732,
+          "alma": 1883.7486112269203,
           "adx": 24.485179643851993
         }
       ]
@@ -1077,25 +1077,25 @@
         "exchange": "Binance",
         "type": "Digital Currency"
       },
-      "latest_close": 75.04,
+      "latest_close": 74.96,
       "latest_datetime": "2026-07-26 07:15:00",
-      "signal": "HOLD",
+      "signal": "SELL",
       "regime": "trending",
       "trade_setup": {
-        "entry": null,
-        "stop_loss": null,
-        "take_profit": null,
-        "risk_reward": null
+        "entry": 74.96,
+        "stop_loss": 75.18957346423375,
+        "take_profit": 74.50085307153252,
+        "risk_reward": 2.0
       },
       "indicators": {
-        "rsi": 54.382547522606885,
-        "rsi_ma": 57.52702735455365,
-        "macd": 0.07457617136274518,
-        "macd_signal": 0.09379237961577455,
-        "macd_histogram": -0.019216208253029367,
-        "alma": 75.026815140444,
+        "rsi": 51.06465995338017,
+        "rsi_ma": 57.29003538532317,
+        "macd": 0.0681944049809788,
+        "macd_signal": 0.09251602633942127,
+        "macd_histogram": -0.024321621358442472,
+        "alma": 75.0091772660829,
         "adx": 27.682426417961953,
-        "atr": 0.1459061190129713
+        "atr": 0.1530489761558284
       },
       "candles": [
         {
@@ -1590,12 +1590,12 @@
         },
         {
           "datetime": "2026-07-26 07:15:00",
-          "close": 75.04,
-          "rsi": 54.382547522606885,
-          "rsi_ma": 57.52702735455365,
-          "macd": 0.07457617136274518,
-          "macd_signal": 0.09379237961577455,
-          "alma": 75.026815140444,
+          "close": 74.96,
+          "rsi": 51.06465995338017,
+          "rsi_ma": 57.29003538532317,
+          "macd": 0.0681944049809788,
+          "macd_signal": 0.09251602633942127,
+          "alma": 75.0091772660829,
           "adx": 27.682426417961953
         }
       ]
